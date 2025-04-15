@@ -1,0 +1,49 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="ecommerce.Site1" %>
+
+<!DOCTYPE html>
+<html>
+<head runat="server">
+    <title>E-commerce Admin Panel</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .navbar {
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .navbar a {
+            color: white;
+            margin-right: 15px;
+            text-decoration: none;
+        }
+        .navbar a:hover {
+            text-decoration: underline;
+        }
+        .content {
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="navbar">
+            <div>
+                <a href="Webform1.aspx">Orders</a>
+                <a href="Webform2.aspx">Stock</a>
+            </div>
+            <div>
+                <asp:Button ID="btnLogout" runat="server" Text="Logout" OnClick="btnLogout_Click" />
+            </div>
+        </div>
+
+        <div class="content">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+        </div>
+    </form>
+</body>
+</html>

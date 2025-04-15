@@ -1,0 +1,94 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="ecommerce.Customers.Site1" %>
+
+
+<!DOCTYPE html>
+<html>
+<head runat="server">
+    <title>Shop with Us</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f8f8f8;
+        }
+
+        .navbar {
+            background-color: #222;
+            padding: 15px;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            margin-left: 15px;
+            font-weight: bold;
+        }
+
+        .navbar a:hover {
+            text-decoration: underline;
+        }
+
+        .main {
+            padding: 30px;
+        }
+
+        .product-card {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            padding: 20px;
+            margin: 10px;
+            width: 280px;
+            float: left;
+        }
+
+        .product-card h4 {
+            margin: 10px 0 5px;
+        }
+
+        .product-card p {
+            margin: 5px 0;
+            color: #555;
+        }
+
+        .product-card button {
+            margin-top: 10px;
+            padding: 8px 12px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        .product-card button:hover {
+            background-color: #218838;
+        }
+
+        .product-list:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="navbar">
+            <div><a href="WebForm1.aspx"<strong>🛍️ My Shop</strong></a></div>
+            <div>
+                <a href="Webform2.aspx">Cart (<asp:Literal ID="litCartCount" runat="server" />)</a>
+                <a href="/Admin/Login.aspx">Admin Panel</a>
+            </div>
+        </div>
+
+        <div class="main">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+        </div>
+    </form>
+</body>
+</html>
