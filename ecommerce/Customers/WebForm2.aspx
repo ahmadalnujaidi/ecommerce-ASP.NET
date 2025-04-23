@@ -17,10 +17,24 @@
 
     <h4>Checkout Information</h4>
     <p>
-        Name: <asp:TextBox ID="txtName" runat="server" /><br /><br />
-        Email: <asp:TextBox ID="txtEmail" runat="server" /><br /><br />
-        Phone: <asp:TextBox ID="txtPhone" runat="server" /><br /><br />
-        Shipping Address: <asp:TextBox ID="txtAddress" runat="server" TextMode="MultiLine" Rows="3" Columns="40" /><br /><br />
+        Name: <asp:TextBox ID="txtName" runat="server" />
+        <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="required name" ControlToValidate="txtName" ForeColor="Red"></asp:RequiredFieldValidator>
+        <br /><br />
+        
+        Email: <asp:TextBox ID="txtEmail" runat="server" />
+        <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="Required email" ControlToValidate="txtEmail" ForeColor="Red"></asp:RequiredFieldValidator>
+        <br /><br />
+        
+        Phone: <asp:TextBox ID="txtPhone" runat="server" />
+        <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ErrorMessage="Phone number must be 10 digits and start with 05" ControlToValidate="txtPhone" ForeColor="Red" ValidationExpression="^05[0-9]{8}$"></asp:RegularExpressionValidator>
+        <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ErrorMessage="required phone number" ControlToValidate="txtPhone"></asp:RequiredFieldValidator>
+        <br /><br />
+        
+
+        Shipping Address: <asp:TextBox ID="txtAddress" runat="server" TextMode="MultiLine" Rows="3" Columns="40" />
+        <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ErrorMessage="required address" ControlToValidate="txtAddress" ForeColor="Red"></asp:RequiredFieldValidator>
+        <br /><br />
+        
         <asp:Button ID="btnCheckout" runat="server" Text="Place Order" OnClick="btnCheckout_Click" CssClass="btn" />
     </p>
 </asp:Content>

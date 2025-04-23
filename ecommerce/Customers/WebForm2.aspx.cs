@@ -46,43 +46,48 @@ namespace ecommerce.Customers
 
         protected void btnCheckout_Click(object sender, EventArgs e)
         {
-            using (SqlConnection conn = new SqlConnection(connStr))
+            if (Page.IsValid)
             {
-                conn.Open();
+                using (SqlConnection conn = new SqlConnection(connStr))
+                {
+                    conn.Open();
 
-                // Load cart again
-                string getCartQuery = @"SELECT c.product_id, c.quantity, (c.quantity * p.price) AS total 
+                    // Load cart again
+                    string getCartQuery = @"SELECT c.product_id, c.quantity, (c.quantity * p.price) AS total 
                         FROM cart c
                         JOIN products p ON c.product_id = p.product_id
                         WHERE c.customer_name = 'Customer'";
-                SqlCommand cmdCart = new SqlCommand(getCartQuery, conn);
-                SqlDataAdapter da = new SqlDataAdapter(cmdCart);
-                DataTable dtCart = new DataTable();
-                da.Fill(dtCart);
+                    SqlCommand cmdCart = new SqlCommand(getCartQuery, conn);
+                    SqlDataAdapter da = new SqlDataAdapter(cmdCart);
+                    DataTable dtCart = new DataTable();
+                    da.Fill(dtCart);
 
-                foreach (DataRow row in dtCart.Rows)
-                {
-                    SqlCommand insert = new SqlCommand(@"INSERT INTO orders 
+                    foreach (DataRow row in dtCart.Rows)
+                    {
+                        SqlCommand insert = new SqlCommand(@"INSERT INTO orders 
                         (product_id, customer_name, customer_email, customer_phone, shipping_address, quantity, total_price)
                         VALUES (@pid, @name, @email, @phone, @address, @qty, @total)", conn);
 
-                    insert.Parameters.AddWithValue("@pid", row["product_id"]);
-                    insert.Parameters.AddWithValue("@name", txtName.Text);
-                    insert.Parameters.AddWithValue("@email", txtEmail.Text);
-                    insert.Parameters.AddWithValue("@phone", txtPhone.Text);
-                    insert.Parameters.AddWithValue("@address", txtAddress.Text);
-                    insert.Parameters.AddWithValue("@qty", row["quantity"]);
-                    insert.Parameters.AddWithValue("@total", row["total"]);
-                    insert.ExecuteNonQuery();
+                        insert.Parameters.AddWithValue("@pid", row["product_id"]);
+                        insert.Parameters.AddWithValue("@name", txtName.Text);
+                        insert.Parameters.AddWithValue("@email", txtEmail.Text);
+                        insert.Parameters.AddWithValue("@phone", txtPhone.Text);
+                        insert.Parameters.AddWithValue("@address", txtAddress.Text);
+                        insert.Parameters.AddWithValue("@qty", row["quantity"]);
+                        insert.Parameters.AddWithValue("@total", row["total"]);
+                        insert.ExecuteNonQuery();
+                    }
+
+                    // Clear cart
+                    SqlCommand clear = new SqlCommand("DELETE FROM cart WHERE customer_name = 'Customer'", conn);
+                    clear.ExecuteNonQuery();
                 }
 
-                // Clear cart
-                SqlCommand clear = new SqlCommand("DELETE FROM cart WHERE customer_name = 'Customer'", conn);
-                clear.ExecuteNonQuery();
+
+                Response.Write("Order placed successfully");
+
+                Response.Redirect("/Customers/WebForm1.aspx");
             }
-
-
-            Response.Write("<script>alert('Order placed successfully!'); window.location='Webform1.aspx';</script>");
         }
         protected void gvCart_RowDeleting(object sender, System.Web.UI.WebControls.GridViewDeleteEventArgs e)
         {

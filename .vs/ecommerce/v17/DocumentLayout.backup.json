@@ -1,14 +1,14 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\a\\Desktop\\ecommerce\\",
+  "WorkspaceRootPath": "C:\\Users\\ahmad\\OneDrive\\Desktop\\ecommerce-ASP.NET\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{159F4A35-C6A0-4447-A59F-B08613C35EC4}|ecommerce\\ecommerce.csproj|c:\\users\\a\\desktop\\ecommerce\\ecommerce\\admin\\webform1.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{159F4A35-C6A0-4447-A59F-B08613C35EC4}|ecommerce\\ecommerce.csproj|solutionrelative:ecommerce\\admin\\webform1.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{159F4A35-C6A0-4447-A59F-B08613C35EC4}|ecommerce\\ecommerce.csproj|c:\\users\\ahmad\\onedrive\\desktop\\ecommerce-asp.net\\ecommerce\\customers\\webform2.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{159F4A35-C6A0-4447-A59F-B08613C35EC4}|ecommerce\\ecommerce.csproj|solutionrelative:ecommerce\\customers\\webform2.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{159F4A35-C6A0-4447-A59F-B08613C35EC4}|ecommerce\\ecommerce.csproj|c:\\users\\a\\desktop\\ecommerce\\ecommerce\\admin\\webform1.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{159F4A35-C6A0-4447-A59F-B08613C35EC4}|ecommerce\\ecommerce.csproj|solutionrelative:ecommerce\\admin\\webform1.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+      "AbsoluteMoniker": "D:0:0:{159F4A35-C6A0-4447-A59F-B08613C35EC4}|ecommerce\\ecommerce.csproj|c:\\users\\ahmad\\onedrive\\desktop\\ecommerce-asp.net\\ecommerce\\customers\\webform1.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{159F4A35-C6A0-4447-A59F-B08613C35EC4}|ecommerce\\ecommerce.csproj|solutionrelative:ecommerce\\customers\\webform1.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,36 +18,36 @@
       "DocumentGroups": [
         {
           "DockedHeight": 213,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "WebForm2.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\ahmad\\OneDrive\\Desktop\\ecommerce-ASP.NET\\ecommerce\\Customers\\WebForm2.aspx.cs",
+              "RelativeDocumentMoniker": "ecommerce\\Customers\\WebForm2.aspx.cs",
+              "ToolTip": "C:\\Users\\ahmad\\OneDrive\\Desktop\\ecommerce-ASP.NET\\ecommerce\\Customers\\WebForm2.aspx.cs",
+              "RelativeToolTip": "ecommerce\\Customers\\WebForm2.aspx.cs",
+              "ViewState": "AgIAAEcAAAAAAAAAAAAgwFcAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-23T08:01:39.606Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "WebForm1.aspx.cs",
-              "DocumentMoniker": "C:\\Users\\a\\Desktop\\ecommerce\\ecommerce\\Admin\\WebForm1.aspx.cs",
-              "RelativeDocumentMoniker": "ecommerce\\Admin\\WebForm1.aspx.cs",
-              "ToolTip": "C:\\Users\\a\\Desktop\\ecommerce\\ecommerce\\Admin\\WebForm1.aspx.cs",
-              "RelativeToolTip": "ecommerce\\Admin\\WebForm1.aspx.cs",
-              "ViewState": "AgIAAEIAAAAAAAAAAAAUwGAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-15T15:31:09.384Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
               "Title": "WebForm1.aspx",
-              "DocumentMoniker": "C:\\Users\\a\\Desktop\\ecommerce\\ecommerce\\Admin\\WebForm1.aspx",
-              "RelativeDocumentMoniker": "ecommerce\\Admin\\WebForm1.aspx",
-              "ToolTip": "C:\\Users\\a\\Desktop\\ecommerce\\ecommerce\\Admin\\WebForm1.aspx",
-              "RelativeToolTip": "ecommerce\\Admin\\WebForm1.aspx",
+              "DocumentMoniker": "C:\\Users\\ahmad\\OneDrive\\Desktop\\ecommerce-ASP.NET\\ecommerce\\Customers\\WebForm1.aspx",
+              "RelativeDocumentMoniker": "ecommerce\\Customers\\WebForm1.aspx",
+              "ToolTip": "C:\\Users\\ahmad\\OneDrive\\Desktop\\ecommerce-ASP.NET\\ecommerce\\Customers\\WebForm1.aspx",
+              "RelativeToolTip": "ecommerce\\Customers\\WebForm1.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2025-04-15T15:31:02.134Z",
+              "WhenOpened": "2025-04-15T17:30:23.783Z",
               "EditorCaption": ""
             }
           ]
