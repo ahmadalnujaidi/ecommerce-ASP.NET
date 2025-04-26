@@ -1,6 +1,5 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="ecommerce.Customers.Site1" %>
 
-
 <!DOCTYPE html>
 <html>
 <head runat="server">
@@ -21,15 +20,10 @@
             align-items: center;
         }
 
-        .navbar a {
+        .navbar .menu {
+            background-color: transparent;
+            border: none;
             color: white;
-            text-decoration: none;
-            margin-left: 15px;
-            font-weight: bold;
-        }
-
-        .navbar a:hover {
-            text-decoration: underline;
         }
 
         .main {
@@ -79,10 +73,20 @@
 <body>
     <form id="form1" runat="server">
         <div class="navbar">
-            <div><a href="WebForm1.aspx"<strong>🛍️ My Shop</strong></a></div>
+            <div><a href="WebForm1.aspx"><strong>🛍️ My Shop</strong></a></div>
             <div>
-                <a href="Webform2.aspx">Cart (<asp:Literal ID="litCartCount" runat="server" />)</a>
-                <a href="/Admin/Login.aspx">Admin Panel</a>
+                <asp:Menu ID="MainMenu" runat="server" Orientation="Horizontal" 
+                          StaticDisplayLevels="1" CssClass="menu"
+                          StaticMenuItemStyle-CssClass="menuitem" 
+                          DynamicMenuItemStyle-CssClass="menuitem">
+                    <Items>
+                        <asp:MenuItem Text="Cart" NavigateUrl="WebForm2.aspx" />
+                        <asp:MenuItem Text="Admin Panel" NavigateUrl="~/Admin/Login.aspx" />
+                    </Items>
+                </asp:Menu>
+                <span style="margin-left: 10px; font-weight:bold;">
+                    (<asp:Literal ID="litCartCount" runat="server" />)
+                </span>
             </div>
         </div>
 
